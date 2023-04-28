@@ -1,0 +1,48 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <h2 class="card-header text-center text-black bg-warning">Login</h2>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="txtname">Name</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="newRegister.employeeName"
+            id="txtname"
+            name="name"
+            placeholder="Enter name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="txtemail">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="txtemail"
+            name="email"
+            [(ngModel)]="newRegister.registerEmail"
+            placeholder="Enter email"
+          />
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group">
+          <label for="txtpassword">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="txtpassword"
+            [(ngModel)]="newRegister.registerPassword"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+        <br />
+        <button type="submit" (click)="registerClick()" class="btn btn-primary">
+          Register
+        </button>
+      </form>
+      <div>Click on "<a type="nav-link" routerLink="/login">Login</a>" if User Already Exists !!</div>
+    </div>
+  </div>
+</div>

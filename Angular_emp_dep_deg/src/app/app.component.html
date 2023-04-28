@@ -1,0 +1,79 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="home" href="#">Home </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="about">About</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="contact" href="#">Contact</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="employee" href="#">Employee</a>
+      </li>
+    </ul>
+  </div>
+</nav> -->
+<nav class="navbar navbar-expand-lg navbar-light bg-warning">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse"  id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="home" href="#">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a  class="nav-link" routerLink="about">About</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="contact" href="#">Contact</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="department" href="#">Department</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="designation" href="#">Designation</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="employee" href="#">Employee</a>
+      </li>
+    </ul>
+
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-danger my-1 my-sm-0" routerLink="register">
+        Register
+      </button>
+      <button
+        *ngIf="loginService.CurrentUserName != ''"
+        (click)="logOutClick()"
+        class="btn btn-outline-danger my-2 m-1 my-sm-0"
+      >
+        Logout
+      </button>
+      <a
+        class="btn btn-outline-danger my-2 m-1 my-sm-0"
+        routerLink="login"
+        *ngIf="loginService.CurrentUserName == ''"
+        >Login</a
+      >
+    </form>
+  </div>
+</nav>
+<div>
+  <router-outlet></router-outlet>
+</div>
